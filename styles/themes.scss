@@ -1,0 +1,72 @@
+body.rainforest {
+	nav {
+		background-color: $rfn-green;
+		a:hover {
+			color: white;
+		}
+	}
+
+	img {
+		max-width: 200px;
+		padding-left: 3%;
+	}
+
+	a {
+		color: #464646;
+	}
+
+	blockquote {
+	    padding-top: 10px;
+	    padding-right: 10px;
+	    background: #D09B2C;
+	    border-left: 8px solid #811619;
+	    padding-bottom: 1px;
+	    margin-left: 50px;
+	    padding-left: 7px;
+	    color: black;
+
+		a {
+			color: black;
+		}
+
+		h5 {
+			color:black;
+		}
+	}
+
+	a:hover {
+		color: #d09b2c;
+	}
+}
+
+
+
+body.table-of-contents {
+	.top {
+		margin-top: 40px;
+	}
+
+	hr {
+		border-top: 5px solid $primary-color;
+	}
+
+	#books {
+		.row {
+			margin-bottom: 4rem;
+		}
+		h2 {
+			font-size: 3.0rem;
+			margin-bottom: 0;
+			a {
+				text-decoration: none;
+				color: $primary-color;
+				font-weight: normal;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	p { font-size: 13px;
+		margin-bottom: 1rem;
+	 }
+}

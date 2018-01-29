@@ -1,0 +1,382 @@
+html {
+
+  height: 100%;
+
+  position: relative; // required for scrollspy
+
+}
+
+body {
+  background: $white;
+}
+body > nav  {
+  background: $primary-color;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+
+  @media (#{$bp-larger-than-phablet}) {
+    height: 100%;
+    padding: 0px 0 0;
+
+  }
+
+
+  .logo {
+  padding: 20px 20px 0px 20px;
+
+
+  margin: 0 auto;
+  float: right;
+//  width: 20%;
+
+
+
+  @media (#{$bp-larger-than-phablet}) {
+    float: none;
+    height: auto;
+    width: 65%;
+  }
+
+
+  img {
+    width: auto;
+    height: auto;
+  }
+
+  }
+
+
+
+h1 {
+  padding: 10px 0 15px 0;
+  margin: 0;
+  background: $primary-color;
+  color: $white;
+  font-weight: bold;
+
+  @media (#{$bp-larger-than-phablet}) {
+    color: $primary-color;
+    font-size: 60pt;
+    font-weight: bold;
+    margin: 50px 0px;
+
+  }
+
+}
+
+
+
+  a {
+  text-decoration: none;
+
+  }
+
+  a#toggle {
+  float: left;
+  position: relative;
+  margin-top: -55px;
+  margin-left: 20px;
+  font-size: 2em;
+  color: $white;
+
+
+  @media (#{$bp-larger-than-phablet}) { display: none; }
+
+  }
+
+
+
+  ul.nav {
+  list-style-type: none;
+  margin: 0;
+  position: relative;
+  // top: -20px; // cancel out h1 margin-bottom
+
+
+  // allow vertical scroll on small screens
+  // overflow-y: scroll;
+  height: calc(100% - 160px);
+
+
+  // initially hidden on mobile
+  display: none;
+
+
+  // nav at top
+  &.visible {
+    float: none;
+    width: calc(80% - 20px);
+    background: $primary-color;
+  }
+  li {
+    padding: 10px 55px 10px 30px;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+
+    &:first-child {
+      padding-top: 65px;
+    }
+    a {
+      color: $white;
+      font-size: 24px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+  li.active a, li:hover a {
+    color: $secondary-color;
+
+  }
+
+
+  // nav to side
+  @media (#{$bp-larger-than-phablet}) {
+    display: block;
+    width: 100%;
+
+
+    a {
+      // fill nav li
+      position: relative;
+      display: block;
+      padding: 10px 0;
+    }
+  }
+
+  }
+
+}
+
+
+.pusher-right {
+  position: relative;
+}
+
+nav.lang-nav {
+  position: relative;
+  float: right;
+  clear: both;
+  background: transparent;
+  text-align: right;
+  font-size: 13px;
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    li {
+      display: inline-block;
+      margin: 0px 4px;
+      a.active {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.lang-show { display: block; }
+.lang-hidden { display: none; }
+
+
+// greyed out text and title for english-only content
+body.table-of-contents #books .ref.greyed {
+  h2 a { color: #333; }
+  p { color: #666; }
+}
+.ref {
+  display: block;
+  float: left;
+  clear: none;
+  width: 100%;
+  min-height: 280px;
+  .four.columns a { display: block; width: 100%; text-align: center; }
+  @media (#{$bp-larger-than-phablet}) { width: 50%; }
+}
+body.page > .content {
+
+  padding-top: 50px; // make space for navbar
+
+  @media (#{$bp-larger-than-phablet}) { padding-top: 0; }
+
+}
+
+blockquote {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; color: $dark-grey;
+    font-style: italic;
+    margin: 15px 0px;
+    a {
+      color: #464646;
+      font-size: 16px;
+      font-weight: normal;
+      font-family: 'Roboto';
+    }
+}
+section.content blockquote a {
+  color: $primary-color;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Roboto';
+}
+
+img { margin: auto; width: 100%;
+  &.pusher { width: calc(100% + 40px); right: -40px; }
+}
+footer {
+
+  padding: 30px 0;
+
+
+
+  background: $dark-grey;
+
+  color: $white;
+
+
+
+  .logo {
+  &.half-width {
+    // keep logos on same line in mobile footer
+    float: left;
+    width: 45%;
+    &:first-child { margin-right: 10%; }
+    vertical-align: middle;
+    img {
+      width: 75%;
+      height: 75%;
+      left: 15%;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+      img { width: 100%; height: 100%; left: 0; }
+    }
+  }
+
+
+  img {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    left: 25%;
+    @media (#{$bp-larger-than-phablet}) {
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    vertical-align: middle;
+  }
+
+  }
+
+
+
+  .text {
+  text-align: center;
+  p {
+    margin: 2.5rem 0;
+    @media (#{$bp-larger-than-phablet}) { margin: 0; }
+  }
+
+  }
+
+  .license img {
+  width: 25%;
+  left: 37.5%;
+  @media (#{$bp-larger-than-phablet}) { width: 200%; }
+
+  }
+
+}
+
+
+/*** New Styles ***/
+
+.full-width {
+  margin-left: -5.4%;
+}
+
+header, .hero {
+  background: url('../images/hero_img.jpg') no-repeat center center;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 60px;
+
+  h1 {
+    color: white;
+    margin-left: 10.8%;
+    font-size: 56px;
+    font-weight: 900;
+    &.line-up {
+      margin-left: 5.4%;
+    }
+    .year {
+      float: left;
+      clear: left;
+      font-size: 104px;
+      font-weight: 900;
+    }
+    .line-1 { font-size: 22px; float: left; clear: right; margin-left: 20px; margin-top: 18px;}
+    .line-2 { font-size: 56px; float: left; clear: right; margin-left: 20px; line-height: 66px; width: 80%; font-weight: bold; }
+    .line-3 { font-size: 20px; float: left; clear: both;  font-family: 'Roboto'; width: 50%; line-height: 24px; }
+  }
+}
+
+.page .content h1 {
+  font-size: 52px;
+  font-weight: 900;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: $dark-grey;
+}
+.page .content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: $dark-grey;
+}
+.page .content h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: $dark-grey;
+  font-family: 'Baton', Arial, sans-serif;
+}
+.page .content .img-breaker {
+  margin-top: 40px;
+}
+
+#newsletter {
+  background: $night-blue;
+  color: white;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  font-size: 16px;
+}
+.cta-button {
+  border-radius: 3px;
+  padding: 13px 26px;
+  color: white;
+  background: $second-orange;
+  text-decoration: none;
+  &:hover, &:active {
+    color: white;
+  }
+}
+.sub-content {
+  margin-left: 5.4%;
+  p, a {
+    line-height: 50px;
+    margin-bottom: 0px;
+  }
+}
+
+.title-icon {
+  
+}
