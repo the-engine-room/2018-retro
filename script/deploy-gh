@@ -16,4 +16,4 @@ touch .nojekyll
 # add, commit and push changes to master
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --force --quiet "https://${GH_USERNAME}:${GH_TOKEN}@${GH_REF}" master:master > /dev/null 2>&1
+git push --force "https://${GH_USERNAME}:${GH_TOKEN}@${GH_REF}" master:master > /dev/null 2>&1
