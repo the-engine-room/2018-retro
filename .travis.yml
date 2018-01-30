@@ -3,16 +3,16 @@ rvm:
 - 2.2.2
 before_script:
 - chmod +x ./script/deploy-gh
-script: "./script/deploy-gh"
+script: ./script/deploy-gh
 branches:
   only:
   - gh-pages
 env:
   global:
   - GH_USERNAME=theengineroom-engineers
-  - GH_EMAIL=engineers@theengineroom.org
   - GH_OWNER=the-engine-room
   - GH_REPO=2017-retro
   - GH_REF=github.com/the-engine-room/2017-retro.git
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: W5CiEvdJuBc2QZKNjXH6ne4fM7Q3nJkjyE4uMknRhrCZLfQHQGoiyMwsGHkqsqpcQl1632Xy/bP8Arky1Qao9EpnUNWjbbXCVT6ccRyO7Ts2pQ32ftI1wf0CTBlItaVKzGO7vX1UBTo91Bd98qV/k7KR8OJtRv4iZ9RNe215NjPE6rW2zb6+3usm03gYqaWltnEK9Dqaed36dak8YCiAFAm1bHxPzVvByoe71TTpC2fUyeDVXYei6KxDu8ImHURbt5RFjoTG8hcjiMqNbpv5S2nvyfcQTvaWqhEDVzLhFCIgE07BnNGbXuvU1F6isd3fVwhsPPxIgMltwaaEsbVGef51p8HcuIjG6Uhnd6a9IcQEMF87z4s+fVysmFIY7hHM/SjEyv+rqZYTxFcS6a3J0d1Ra6dpAtBtSe5TIPeB4kGTqBTp7F5vF1kXtIaQNO/0RtoUMWwVeiRi3v4VKvQepw3t+fm8nAufUbBkJQWaio5KPOKPJgiEzruvp+z0g/PNjqP4cvQCd2DzrHjW0e0+m3TxpqqqrwhqcBWmu80cfdduq2oQtdZWvzQ+LrAH4F1GhAFaHYzoztKy/URMl+zL8WuISlLmAKUBIfuPiRLOxgRVwYHIs2ZSDPbzGVo6OUe35fG/M3qGfSzWlMu+xkCSIuxaz71XGuPkRenU6d1b1H0=
 sudo: false
