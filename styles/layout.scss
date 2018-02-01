@@ -206,25 +206,6 @@ body.page > .content {
 
 }
 
-blockquote {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px; color: $dark-grey;
-    font-style: italic;
-    margin: 15px 0px;
-    a {
-      color: #464646;
-      font-size: 16px;
-      font-weight: normal;
-      font-family: 'Roboto';
-    }
-}
-section.content blockquote a {
-  color: $primary-color;
-  font-size: 16px;
-  font-weight: normal;
-  font-family: 'Roboto';
-}
-
 img { margin: auto; width: 100%;
   &.pusher { width: calc(100% + 40px); right: -40px; }
 }
@@ -305,7 +286,19 @@ header, .hero {
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 60px;
-
+  &.hero1 {
+    padding-top: 228px;
+  }
+  &.hero2 {
+    background: url('../images/hero_img_2.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 228px;
+  }
+  &.hero3 {
+    background: url('../images/hero_img_3.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 430px;
+  }
   h1 {
     color: white;
     margin-left: 10.8%;
@@ -320,10 +313,14 @@ header, .hero {
       font-size: 104px;
       font-weight: 900;
     }
-    .line-1 { font-size: 22px; float: left; clear: right; margin-left: 20px; margin-top: 18px;}
+    .line-1 { font-size: 22px; float: left; clear: right; margin-left: 20px; margin-top: 18px; font-weight: normal; }
     .line-2 { font-size: 56px; float: left; clear: right; margin-left: 20px; line-height: 66px; width: 80%; font-weight: bold; }
-    .line-3 { font-size: 20px; float: left; clear: both;  font-family: 'Roboto'; width: 50%; line-height: 24px; }
+    .line-3 { font-size: 20px; float: left; clear: both;  font-family: 'Roboto'; width: 50%; line-height: 24px; font-weight: normal; }
   }
+}
+#intro-letter p:first-child {
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .page .content h1 {
@@ -348,11 +345,12 @@ header, .hero {
   color: $dark-grey;
   font-family: 'Baton', Arial, sans-serif;
 }
-.page .content .img-breaker {
+.page .content .img-breaker, .img-breaker {
   margin-top: 40px;
+  display: block;
 }
 
-#newsletter {
+#newsletter, .blue-bar {
   background: $night-blue;
   color: white;
   padding-top: 44px;
@@ -372,11 +370,68 @@ header, .hero {
 .sub-content {
   margin-left: 5.4%;
   p, a {
-    line-height: 50px;
+  //line-height: 50px;
     margin-bottom: 0px;
+    &.centered {
+      text-align: center;
+    }
   }
 }
 
 .title-icon {
-  
+  width: auto;
+  height: auto;
+  margin: 40px auto 20px;
+  float: right;
+}
+.learned-icon {
+  width: auto;
+  height: auto;
+  margin: 0px auto;
+  }
+
+.support-services article p {
+  margin: 20px 0px;
+}
+.product {
+  margin-top: 40px;
+}
+.support-service-logo {
+  text-align: center;
+  img {
+    height: 100%;
+    width: auto;
+    margin: 10px auto;
+  }
+}
+
+.relative {
+  position: relative;
+}
+.map-label {
+  position: absolute;
+  left: 60%;
+  top: 50px;
+}
+
+blockquote {
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 15px;
+  font-style: italic;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  background: url('../images/quote.svg') no-repeat top left;
+  margin: 0px 0px 20px;
+  .author {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    display: block;
+    float: right;
+    clear: both;
+
+  }
+
 }
