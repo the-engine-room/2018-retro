@@ -413,6 +413,14 @@ header, .hero {
   position: absolute;
   left: 60%;
   top: 50px;
+  &.map-2 {
+    text-align: right;
+    padding: 40px;
+    left: 70%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+  }
 }
 
 blockquote {
@@ -457,7 +465,7 @@ blockquote {
     p {
       font-weight: bold;
       text-shadow: 1px 1px 3px 0 rgba(0,0,0,0.25);
-      
+
       &:first-child { margin-left: -40px; }
       &:nth-child(2) { margin-left: 0px; }
       &:nth-child(3) { margin-left: 10px; }
