@@ -2,9 +2,25 @@ language: ruby
 cache: bundler
 rvm:
 - 2.2.2
-before_script:
-- chmod +x ./script/deploy-gh
-script: ./script/deploy-gh
+addons:
+  ssh_known_hosts:
+  - engnroom.org
+  - ftp.greenhost.nl
+before_install:
+- openssl aes-256-cbc -K $encrypted_924390b0b1a8_key -iv $encrypted_924390b0b1a8_iv
+  -in deploy-key-2017.enc -out deploy-key-2017 -d
+- chmod 600 ~/.ssh/config
+- chmod 600 deploy-key-2017
+- mv deploy-key-2017 ~/.ssh/id_rsa
+- rm deploy-key-2017.enc
+- echo -e "Host engnroom.org" >> ~/.ssh/config
+- echo -e "IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+- echo -e "Host ftp.greenhost.nl" >> ~/.ssh/config
+- echo -e "IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+script:
+- bash script/build.sh
+after_success:
+- bash script/deploy.sh
 branches:
   only:
   - gh-pages
