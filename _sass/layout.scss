@@ -14,10 +14,21 @@ body > nav  {
 }
 
 nav {
-  position: fixed;
+
   width: 100%;
   text-align: center;
   z-index: 1;
+  height: 100%;
+  position: fixed;
+
+  &.fixed {
+    position: fixed;
+  }
+  &.bottom {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+  }
 
   @media (#{$bp-larger-than-phablet}) {
     height: 100%;
@@ -139,8 +150,6 @@ h1 {
   @media (#{$bp-larger-than-phablet}) {
     display: block;
     width: 100%;
-
-
     a {
       // fill nav li
       position: relative;
@@ -212,14 +221,41 @@ img { margin: auto; width: 100%;
 footer {
 
   padding: 30px 0;
-
-
-
   background: $dark-grey;
-
   color: $white;
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+  .footer-logo {
+   text-align: center;
+  }
 
-
+  #menu-footer {
+    list-style: none;
+    padding: 0pX; margin: 0px;
+    li {
+      float: left;
+      display: inline-block;
+      width: 25%;
+    }
+  }
+  label {
+    display: none;
+  }
+  input[type="text"] {
+    border: 3px solid white;
+    background: transparent;
+    padding: 6px 16px;
+    margin: 0px;
+    color: white;
+    &:focus {
+      border: 3px solid white;
+    }
+  }
 
   .logo {
   &.half-width {
@@ -286,7 +322,10 @@ header, .hero {
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 60px;
+
   &.hero1 {
+    background: url('../images/hero_img_1.jpg') no-repeat center center;
+    background-size: cover;
     padding-top: 228px;
   }
   &.hero2 {
@@ -299,6 +338,11 @@ header, .hero {
     background-size: cover;
     padding-top: 430px;
   }
+  &.hero4 {
+    background: url('../images/hero_img_next.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 430px;
+  }
   h1 {
     color: white;
     margin-left: 10.8%;
@@ -307,6 +351,7 @@ header, .hero {
     &.line-up {
       margin-left: 5.4%;
     }
+
     .year {
       float: left;
       clear: left;
@@ -316,7 +361,17 @@ header, .hero {
     .line-1 { font-size: 22px; float: left; clear: right; margin-left: 20px; margin-top: 18px; font-weight: normal; }
     .line-2 { font-size: 56px; float: left; clear: right; margin-left: 20px; line-height: 66px; width: 80%; font-weight: bold; }
     .line-3 { font-size: 20px; float: left; clear: both;  font-family: 'Roboto'; width: 50%; line-height: 24px; font-weight: normal; }
+
+    ~ p {
+      color: white;
+      margin-left: 5.4%;
+      font-size: 16px;
+      line-height: 22px;
+      width: 70%;
+      font-weight: bold; 
+    }
   }
+
 }
 
 #intro-letter p:first-child {

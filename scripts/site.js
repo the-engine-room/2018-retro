@@ -46,4 +46,32 @@ $(document).ready(function() {
     $('body').scrollspy({
         target: 'nav'
     });
+
+    /*
+     * Fix sidebar at some point and remove
+     * fixed position at content bottom
+     */
+    $(window).scroll(function () {
+      var docHeight = $(document).height();
+      var scrollPos = $(window).height() + $(window).scrollTop();
+
+      var trigg = (docHeight - scrollPos) / scrollPos;
+
+      console.log( trigg );
+      if ( trigg === 0 ) {
+          $('nav').addClass('bottom').removeClass('fixed');
+          $('nav').css({
+            'top': docHeight -  $(window).height(),
+            'height' : $(window).height() - $('footer').innerHeight()
+          });
+      }
+      else {
+        $('nav').addClass('fixed').removeClass('bottom');
+        $('nav').css({
+          'top': 0,
+          'height' : $(window).height() + $('footer').innerHeight()
+        });
+      }
+
+    });
 });
