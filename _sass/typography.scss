@@ -52,9 +52,9 @@ section.content {
   color: #666;
   /** new Anchor styles **/
   a {
-    font-family: 'Baton', Sans-serif;
+    /* font-family: 'Baton', Sans-serif;
     font-weight: bold;
-    font-size: 15pt;
+    font-size: 15pt; */
     color: $link-color;
     text-decoration: none;
     &:hover, &:active {

@@ -10,9 +10,9 @@ $dark-grey: #464646 !default;
 $primary-color: #95335E !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
-$link-color: #5DBFC6 !default;
-$link-visited: #166A70 !default;
-$link-active: #95335E !default;
+$link-color: #DB542E !default;
+$link-visited: #DB542E !default;
+$link-active: #DB542E !default;
 $font-color: $dark-grey;
 
 // Typography
@@ -47,7 +47,7 @@ $night-blue: #1F2D39;
 $primary-color: $night-blue;
 $secondary-color: $orange-juice;
 
-$link-color: $sky-captain;
+$link-color: $orange-juice;
 $link-visited: $orange-juice;
 $link-active: $orange-juice;
 
