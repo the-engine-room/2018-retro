@@ -1,9 +1,6 @@
 html {
-
   height: 100%;
-
   position: relative; // required for scrollspy
-
 }
 
 body {
@@ -14,7 +11,6 @@ body > nav  {
 }
 
 nav {
-
   width: 100%;
   text-align: center;
   z-index: 1;
@@ -29,36 +25,23 @@ nav {
     bottom: 0;
     top: auto;
   }
-
   @media (#{$bp-larger-than-phablet}) {
     height: 100%;
     padding: 0px 0 0;
-
   }
-
-
   .logo {
-  padding: 40px 20px 0px 20px;
-
-
-  margin: 0 auto;
-  float: right;
-//  width: 20%;
-
-
-
-  @media (#{$bp-larger-than-phablet}) {
-    float: none;
-    height: auto;
-    width: 65%;
-  }
-
-
-  img {
-    width: auto;
-    height: auto;
-  }
-
+    padding: 40px 20px 0px 20px;
+    margin: 0 auto;
+    float: right;
+    @media (#{$bp-larger-than-phablet}) {
+      float: none;
+      height: auto;
+      width: 65%;
+    }
+    img {
+      width: auto;
+      height: auto;
+    }
   }
 
 
@@ -106,19 +89,9 @@ h1 {
   list-style-type: none;
   margin: 0;
   position: relative;
-  // top: -20px; // cancel out h1 margin-bottom
-
-
-  // allow vertical scroll on small screens
-  // overflow-y: scroll;
   height: calc(100% - 160px);
-
-
-  // initially hidden on mobile
   display: none;
 
-
-  // nav at top
   &.visible {
     float: none;
     width: calc(80% - 20px);
@@ -142,7 +115,6 @@ h1 {
   }
   li.active a, li:hover a {
     color: $secondary-color;
-
   }
 
 
@@ -151,15 +123,12 @@ h1 {
     display: block;
     width: 100%;
     a {
-      // fill nav li
       position: relative;
       display: block;
       padding: 10px 0;
     }
   }
-
-  }
-
+}
 }
 
 
@@ -359,7 +328,7 @@ header, .hero {
       font-size: 104px;
       font-weight: 900;
     }
-    .line-1 { font-size: 22px; float: left; clear: right; margin-left: 20px; margin-top: 18px; font-weight: normal; width: 60%;}
+    .line-1 { font-size: 22px; float: left; clear: right; margin-left: 20px; margin-top: 18px; font-weight: normal; width: 60%; }
     .line-2 { font-size: 56px; float: left; clear: right; margin-left: 20px; line-height: 66px; width: 60%; font-weight: bold; }
     .line-3 { font-size: 20px; float: left; clear: both;  font-family: 'Roboto'; width: 50%; line-height: 24px; font-weight: normal; }
 
@@ -571,3 +540,115 @@ img.partner-funder-logo {
   padding: 25px; display: inline-block; clear: none; width: auto; height: auto;
 }
 .consultants p { font-weight: bold; text-align: center; padding: 20px 40px; }
+
+.number-row {
+
+  .number {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    clear: none;
+    padding: 23px 29px;
+    color: white;
+    font-family: 'Baton', sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+  //  height: 127px;
+    &:first-child, &.number-margin {
+      margin-right: 15px;
+    }
+    &.number-spread-1 { width: 33.3333%;
+      &:first-child, &.number-margin { width: calc(33.3333% - 15px); }
+    }
+    &.number-spread-2 { width: 66.6666%;
+      &:first-child, &.number-margin { width: calc(66.6666% - 15px); }
+    }
+    &.number-spread-half { width: 50%;
+      &:first-child, &.number-margin { width: calc(50% - 15px); }
+    }
+    &.number-margin {
+
+    }
+
+
+    &.number-color-pink     { background: #ea506a; }
+    &.number-color-greyblue { background: #707e96; }
+    &.number-color-ochre    { background: #EAA623; }
+    &.number-color-blue     { background: #1D79B4; }
+    &.number-color-fuchsia  { background: #94335E; }
+    &.number-color-seagreen { background: #166A70; }
+    &.number-color-gray     { background: #464646; }
+
+
+
+
+
+    .counter { float: left; display: inline-block; padding-right: 15px; line-height: 100%;
+      &.n106 { font-size: 106px;
+        & ~ .label {
+          float: left;
+          display: inline-block;
+          font-size: 40px;
+          background: url(../images/by-the-numbers/love.svg) no-repeat top right;
+          line-height: 100%;
+          margin-top: 12px;
+        }
+      }
+      &.n64 { font-size: 64px;
+        & ~ .label {
+          float: left;
+          display: inline-block;
+          font-size: 32px;
+          background: url(../images/by-the-numbers/contract.svg) no-repeat top right;
+          line-height: 100%;
+          width: 65%;
+          //margin-top: 12px;
+        }
+      }
+      &.n72 { font-size: 72px;
+        & ~ .label {
+          float: left;
+          display: inline-block;
+          font-size: 32px;
+          background: url(../images/by-the-numbers/twitters.svg) no-repeat top right;
+          line-height: 120%;
+          padding-top: 25px;
+          width: 65%;
+          //margin-top: 12px;
+        }
+      }
+      &.n89 { font-size: 89px;
+        & ~ .label {
+          float: left;
+          display: inline-block;
+          font-size: 40px;
+          line-height: 100%;
+        }
+      }
+      &.n79 { font-size: 79px;
+        & ~ .label {
+          float: left;
+          display: inline-block;
+          font-size: 42px;
+          background: url(../images/by-the-numbers/surface.svg) no-repeat top right;
+          line-height: 100%;
+        }
+      }
+
+    }
+    .n112 {
+      font-size: 56px;
+      float: left;
+      display: block;
+      background: url(../images/by-the-numbers/github.svg) no-repeat top right;
+      line-height: 100%;
+    }
+    .label {
+      float: left; display: inline-block;
+      &.website {
+        font-size: 27px;
+
+      }
+    }
+  }
+}
