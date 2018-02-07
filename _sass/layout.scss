@@ -572,7 +572,7 @@ blockquote {
 }
 .grayer { background: #ECECEC;  }
 img.event-logo {
-  padding: 25px; float: left; clear: none; display: block; width: auto; height: auto;
+  padding: 25px; clear: none; display: inline-block; width: auto; height: auto;
 }
 .pf-logos { text-align: center; }
 img.partner-funder-logo {
@@ -617,6 +617,7 @@ img.partner-funder-logo {
     &.number-color-fuchsia  { background: #94335E; }
     &.number-color-seagreen { background: #166A70; }
     &.number-color-gray     { background: #464646; }
+    &.number-color-green    { background: #008B4D; }
 
 
 
@@ -631,6 +632,28 @@ img.partner-funder-logo {
           background: url(../images/by-the-numbers/love.svg) no-repeat top right;
           line-height: 100%;
           margin-top: 12px;
+        }
+      }
+      &.n1062 { font-size: 106px;
+        & ~ .label {
+          float: left;
+          display: inline-block;
+          font-size: 40px;
+          background: url(../images/by-the-numbers/medal.svg) no-repeat top right;
+          line-height: 100%;
+          margin-top: 12px;
+          width: 100%;
+        }
+      }
+      &.n1063 { font-size: 106px;
+        & ~ .label {
+          float: left;
+          display: inline-block;
+          font-size: 40px;
+          //background: url(../images/by-the-numbers/medal.svg) no-repeat top right;
+          line-height: 100%;
+          margin-top: 12px;
+          width: 100%;
         }
       }
       &.n64 { font-size: 64px;
@@ -653,6 +676,19 @@ img.partner-funder-logo {
           line-height: 120%;
           padding-top: 25px;
           width: 65%;
+          //margin-top: 12px;
+        }
+      }
+      &.n722 { font-size: 72px; width: 100%;
+        span.c { float: left; clear: none; display: block; width: 50%;  }
+        img { float: right; clear: none; display: block; width: auto; }
+        & ~ .label {
+          float: left;
+          display: inline-block;
+          font-size: 32px;
+          line-height: 120%;
+          padding-top: 25px;
+          width: 100%;
           //margin-top: 12px;
         }
       }
@@ -681,6 +717,7 @@ img.partner-funder-logo {
       display: block;
       background: url(../images/by-the-numbers/github.svg) no-repeat top right;
       line-height: 100%;
+      width: 100%;
     }
     .label {
       float: left; display: inline-block;
@@ -690,4 +727,19 @@ img.partner-funder-logo {
       }
     }
   }
+}
+.events {
+  text-align: center;
+  /* max-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img { max-width: 50%; } */
+}
+.plant-pots {
+  display: block; clear: both;
+  width: 100%;
+  height: 109px;
+  background: url(../images/by-the-numbers/pot.svg) repeat top left;
 }
