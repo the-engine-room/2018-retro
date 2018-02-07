@@ -409,7 +409,7 @@ header, .hero {
   margin-top: 40px;
   display: block;
 }
-article.pad-bottom {
+.pad-bottom {
   padding-bottom: 40px;
 }
 #newsletter, .blue-bar {
@@ -456,8 +456,15 @@ article.pad-bottom {
 .support-services article p {
   margin: 20px 0px;
 }
+.page .content.support-services h2 { margin-bottom: 10px; }
+.page .content.support-services h2 ~ h3 {
+  margin-top: 0px;
+}
 .product {
   margin-top: 40px;
+}
+.row.product ~ .row:not(.product) {
+  margin-top: 50px;
 }
 .support-service-logo {
   text-align: center;
@@ -467,7 +474,7 @@ article.pad-bottom {
     margin: 10px auto;
   }
 }
-
+.blue-bar p {font-weight: bold; }
 .relative {
   position: relative;
 }
