@@ -49,7 +49,7 @@ $secondary-color: $orange-juice;
 
 $link-color: $orange-juice;
 $link-visited: $orange-juice;
-$link-active: $orange-juice;
+$link-active: lighten($orange-juice, 10%);
 
 $font-family-heading: "Baton", Arial, sans-serif;
 

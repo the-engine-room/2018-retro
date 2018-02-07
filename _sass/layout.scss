@@ -66,7 +66,7 @@ h1 {
 
 
   a {
-  text-decoration: none;
+    text-decoration: none;
 
   }
 
@@ -189,14 +189,17 @@ img { margin: auto; width: 100%;
 }
 footer {
 
-  padding: 30px 0;
-  background: $dark-grey;
+  padding: 32px 0 1px;
+  background: #555B69;
   color: $white;
   a {
     color: white;
     text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
     &:hover {
       color: white;
+      text-decoration: underline;
     }
   }
   .footer-logo {
@@ -216,15 +219,38 @@ footer {
     display: none;
   }
   input[type="text"] {
-    border: 3px solid white;
-    background: transparent;
-    padding: 6px 16px;
-    margin: 0px;
-    color: white;
+    -webkit-appearance: none;
+      appearance: none;
+      background: none;
+      border-color: inherit;
+      border-radius: 0;
+      border-style: solid;
+      border-width: 2px;
+      box-sizing: border-box;
+      display: block;
+      font-size: 16px;
+      height: 44px;
+      padding: 8px 12px;
+      width: 80%;
     &:focus {
       border: 3px solid white;
     }
   }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-weight: 300;
+    color: white;
+    opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      font-weight: 300;
+        color: white;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      font-weight: 300;
+        color: white;
+    }
 
   .logo {
   &.half-width {
@@ -308,9 +334,12 @@ header, .hero {
     padding-top: 430px;
   }
   &.hero4 {
-    background: url('../images/hero_img_next.jpg') no-repeat center center;
+    background: url('../images/hero_img_next.jpg') no-repeat bottom right;
     background-size: cover;
-    padding-top: 430px;
+    padding: 0px;
+    min-height: 340px;
+    h1 { padding-top: 140px; }
+    p { padding-bottom: 60px; }
   }
   h1 {
     color: white;
@@ -380,13 +409,16 @@ header, .hero {
   margin-top: 40px;
   display: block;
 }
-
+article.pad-bottom {
+  padding-bottom: 40px;
+}
 #newsletter, .blue-bar {
   background: $night-blue;
   color: white;
   padding-top: 44px;
   padding-bottom: 44px;
-  font-size: 16px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 .cta-button {
   border-radius: 3px;

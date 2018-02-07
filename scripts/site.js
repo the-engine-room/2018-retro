@@ -54,23 +54,27 @@ $(document).ready(function() {
     $(window).scroll(function () {
       var docHeight = $(document).height();
       var scrollPos = $(window).height() + $(window).scrollTop();
+      var footerPos = docHeight - $('footer').height();
 
       var trigg = (docHeight - scrollPos) / scrollPos;
 
       console.log( trigg );
-      if ( trigg === 0 ) {
+      console.log('Scroll:' + scrollPos + ' -- FooterPos: ' + footerPos);
+      if ( scrollPos >= footerPos ) {
+        $('nav').css({
+          'top': docHeight -  $(window).height(),
+          'height' : $(window).height() - $('footer').innerHeight()
+        });
           $('nav').addClass('bottom').removeClass('fixed');
-          $('nav').css({
-            'top': docHeight -  $(window).height(),
-            'height' : $(window).height() - $('footer').innerHeight()
-          });
+
       }
       else {
-        $('nav').addClass('fixed').removeClass('bottom');
         $('nav').css({
           'top': 0,
           'height' : $(window).height() + $('footer').innerHeight()
         });
+        $('nav').addClass('fixed').removeClass('bottom');
+
       }
 
     });
