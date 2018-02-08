@@ -132,7 +132,7 @@ h1 {
     }
   }
   li {
-    padding: 10px 55px 10px 30px;
+    padding: 10px 30px 10px 30px;
     margin-bottom: 0;
     font-weight: bold;
     text-align: center;
@@ -355,17 +355,20 @@ header, .hero {
   &.hero1 {
     background: url('../images/hero_img_1.jpg') no-repeat center center;
     background-size: cover;
-    padding-top: 228px;
+    padding-top: 410px;
+      padding-bottom: 10px;
   }
   &.hero2 {
     background: url('../images/hero_img_2.jpg') no-repeat center center;
     background-size: cover;
-    padding-top: 228px;
+    padding-top: 410px;
+      padding-bottom: 10px;
   }
   &.hero3 {
     background: url('../images/hero_img_3.jpg') no-repeat center center;
     background-size: cover;
-    padding-top: 430px;
+    padding-top: 450px;
+    padding-bottom: 10px;
   }
   &.hero4 {
     background: url('../images/hero_img_next.jpg') no-repeat bottom right;
@@ -462,6 +465,10 @@ header, .hero {
   text-decoration: none;
   &:hover, &:active {
     color: white;
+    background: $link-active;
+  }
+  &.pusherpusher {
+    display: inline-block;
   }
 }
 .sub-content {
@@ -524,11 +531,11 @@ header, .hero {
     padding: 15px 0px;
     @media (#{$bp-larger-than-phablet}) {
       text-align: right;
-      padding: 40px;
-      left: 70%;
+      padding: 20px 30px;
+      left: 60%;
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }
@@ -609,13 +616,13 @@ blockquote {
 }
 .grayer { background: #ECECEC;  }
 img.event-logo {
-  padding: 25px; clear: none; display: inline-block; width: auto; height: auto;
+  padding: 25px 5px 0px; clear: none; display: inline-block; width: auto; height: auto;
 }
 .pf-logos { text-align: center; }
 img.partner-funder-logo {
   padding: 25px; display: inline-block; clear: none; width: auto; height: auto;
 }
-.consultants p { font-weight: bold; text-align: center; padding: 20px 40px; }
+.consultants p {  text-align: center; padding: 20px 40px; }
 
 .number-row {
 
@@ -698,9 +705,9 @@ img.partner-funder-logo {
           float: left;
           display: inline-block;
           font-size: 32px;
-          background: url(../images/by-the-numbers/contract.svg) no-repeat top right;
+          background: url(../images/by-the-numbers/contract.svg) no-repeat center right;
           line-height: 100%;
-          width: 65%;
+          width: 85%;
           //margin-top: 12px;
         }
       }
