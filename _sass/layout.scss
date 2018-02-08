@@ -10,33 +10,72 @@ body > nav  {
   background: $primary-color;
 }
 
+a#toggle {
+  float: left;
+  position: relative;
+  //margin-top: -55px;
+  margin-left: 20px;
+  font-size: 2em;
+  color: $white;
+
+
+  @media (#{$bp-larger-than-phablet}) { display: none; }
+
+}
+
+.mobile-menu {
+  height: 56px;
+  position: fixed;
+  width: 100%;
+  background: black;
+  button.menu-trigger {
+    border: none; background: #1F2D39; color: white;
+    width: 48px; height: 48px; border-radius: 24px;
+    margin: 4px; font-size: 12px; text-transform: uppercase;
+    float: right;
+    padding: 0px;
+  }
+
+  @media (#{$bp-larger-than-phablet}) {
+    display: none;
+  }
+}
+
 nav {
   width: 100%;
   text-align: center;
   z-index: 1;
-  height: 100%;
   position: fixed;
-
-  &.fixed {
-    position: fixed;
-  }
-  &.bottom {
-    position: absolute;
-    bottom: 0;
-    top: auto;
-  }
+  height: 56px;
   @media (#{$bp-larger-than-phablet}) {
     height: 100%;
     padding: 0px 0 0;
+
+    &.fixed {
+      position: fixed;
+    }
+    &.bottom {
+      position: absolute;
+      bottom: 0;
+      top: auto;
+    }
   }
   .logo {
-    padding: 40px 20px 0px 20px;
-    margin: 0 auto;
-    float: right;
+
+    display: none;
     @media (#{$bp-larger-than-phablet}) {
       float: none;
       height: auto;
       width: 65%;
+      padding: 40px 20px 0px 20px;
+      margin: 0 auto;
+      display: block;
+    }
+    &.mobile {
+      display: block; margin: 30px auto;
+      @media (#{$bp-larger-than-phablet}) {
+        display: none;
+      }
     }
     img {
       width: auto;
@@ -70,18 +109,7 @@ h1 {
 
   }
 
-  a#toggle {
-  float: left;
-  position: relative;
-  margin-top: -55px;
-  margin-left: 20px;
-  font-size: 2em;
-  color: $white;
 
-
-  @media (#{$bp-larger-than-phablet}) { display: none; }
-
-  }
 
 
 
@@ -94,8 +122,14 @@ h1 {
 
   &.visible {
     float: none;
-    width: calc(80% - 20px);
+    width: 100%;
     background: $primary-color;
+    height: 100vh;
+    position: absolute;
+    top: 56px;
+    @media (#{$bp-larger-than-phablet})  {
+      width: calc(80% - 20px);
+    }
   }
   li {
     padding: 10px 55px 10px 30px;
@@ -487,12 +521,15 @@ header, .hero {
   //background: rgba(255,255,255,0.45);
   font-size: 16px;
   &.map-2 {
-    text-align: right;
-    padding: 40px;
-    left: 70%;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
+    padding: 15px 0px;
+    @media (#{$bp-larger-than-phablet}) {
+      text-align: right;
+      padding: 40px;
+      left: 70%;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+    }
   }
 }
 .intro-par {

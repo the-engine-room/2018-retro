@@ -8,6 +8,7 @@ $bp-larger-than-tablet    : "min-width: 750px" !default;
 $bp-larger-than-desktop   : "min-width: 1000px" !default;
 $bp-larger-than-desktophd : "min-width: 1200px" !default;
 
+$bp-smaller-than-phablet   : "max-width: 550px" !default;
 // Colors
 $light-grey: #eee !default;
 $dark-grey: #464646 !default;

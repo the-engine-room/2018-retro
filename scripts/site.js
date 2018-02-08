@@ -55,12 +55,9 @@ $(document).ready(function() {
       var docHeight = $(document).height();
       var scrollPos = $(window).height() + $(window).scrollTop();
       var footerPos = docHeight - $('footer').height();
-
       var trigg = (docHeight - scrollPos) / scrollPos;
 
-      console.log( trigg );
-      console.log('Scroll:' + scrollPos + ' -- FooterPos: ' + footerPos);
-      if ( scrollPos >= footerPos ) {
+      if ( (scrollPos >= footerPos) && $(window).width() > 550 ) {
         $('nav').css({
           'top': docHeight -  $(window).height(),
           'height' : $(window).height() - $('footer').innerHeight()
@@ -68,7 +65,7 @@ $(document).ready(function() {
           $('nav').addClass('bottom').removeClass('fixed');
 
       }
-      else {
+      else if((scrollPos < footerPos) && $(window).width() > 550) {
         $('nav').css({
           'top': 0,
           'height' : $(window).height() + $('footer').innerHeight()
