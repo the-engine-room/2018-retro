@@ -562,6 +562,19 @@ blockquote {
   }
 }
 
+
+.culture-col {
+  text-align: center;
+  img {
+    margin: 0px auto;
+    padding: 20px;
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+/*
 .culture-col {
   position: relative;
   img {
@@ -613,7 +626,7 @@ blockquote {
       margin-left: 60px
     }
   }
-}
+} */
 .grayer { background: #ECECEC;  }
 img.event-logo {
   padding: 25px 5px 0px; clear: none; display: inline-block; width: auto; height: auto;
