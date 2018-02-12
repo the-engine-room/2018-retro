@@ -26,7 +26,9 @@ section.content {
   padding-left: 15px;
   @media (#{$bp-larger-than-phablet}) { padding-left: 0px; }
 }
-
+.support-service-logo img.rd-logo {
+  width: 80px; height: 80px;
+}
 .mobile-menu {
   height: 56px;
   position: fixed;
