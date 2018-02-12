@@ -662,6 +662,10 @@ img.partner-logo {
     &:first-child, &.number-margin {
       margin-right: 15px;
     }
+    &.number-spread-all { width: 100%;
+      
+    }
+
     &.number-spread-1 { width: 33.3333%;
       &:first-child, &.number-margin { width: calc(33.3333% - 15px); }
     }
