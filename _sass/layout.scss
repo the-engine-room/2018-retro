@@ -639,7 +639,10 @@ img.event-logo {
 }
 .pf-logos { text-align: center; }
 img.partner-funder-logo {
-  padding: 25px; display: inline-block; clear: none; width: auto; height: auto;
+  padding: 25px 0px; display: inline-block; clear: none; width: auto; height: auto; max-width: 100%;
+}
+img.partner-logo {
+  padding: 25px 10px; display: inline-block; clear: none; width: auto; height: auto; max-width: 100%;
 }
 .consultants p {  text-align: center; padding: 20px 40px; }
 
