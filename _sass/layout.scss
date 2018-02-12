@@ -22,6 +22,10 @@ a#toggle {
   @media (#{$bp-larger-than-phablet}) { display: none; }
 
 }
+section.content {
+  padding-left: 15px;
+  @media (#{$bp-larger-than-phablet}) { padding-left: 0px; }
+}
 
 .mobile-menu {
   height: 56px;
