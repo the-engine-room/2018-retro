@@ -1,4 +1,4 @@
-RewriteEngine On
-RewriteCond %{HTTPS} off 
-RewriteCond %{HTTP_HOST} =2018.theengineroom.org
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301]
+#RewriteEngine On
+#RewriteCond %{HTTPS} off 
+#RewriteCond %{HTTP_HOST} =2018.theengineroom.org
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301]
