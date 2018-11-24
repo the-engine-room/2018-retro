@@ -7,12 +7,12 @@ addons:
   - engnroom.org
   - ftp.greenhost.nl
 before_install:
-- openssl aes-256-cbc -K $encrypted_924390b0b1a8_key -iv $encrypted_924390b0b1a8_iv
-  -in deploy-key-2017.enc -out deploy-key-2017 -d
+- openssl aes-256-cbc -K $encrypted_514b56c4123c_key -iv $encrypted_514b56c4123c_iv
+  -in deploy-key-2018.enc -out deploy-key-2018 -d
 - chmod 600 ~/.ssh/config
-- chmod 600 deploy-key-2017
-- mv deploy-key-2017 ~/.ssh/id_rsa
-- rm deploy-key-2017.enc
+- chmod 600 deploy-key-2018
+- mv deploy-key-2018 ~/.ssh/id_rsa
+- rm deploy-key-2018.enc
 - echo -e "Host engnroom.org" >> ~/.ssh/config
 - echo -e "IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
 - echo -e "Host ftp.greenhost.nl" >> ~/.ssh/config
@@ -28,8 +28,8 @@ env:
   global:
   - GH_USERNAME=theengineroom-engineers
   - GH_OWNER=the-engine-room
-  - GH_REPO=2017-retro
-  - GH_REF=github.com/the-engine-room/2017-retro.git
+  - GH_REPO=2018-retro
+  - GH_REF=github.com/the-engine-room/2018-retro.git
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - secure: nat1RqR9ETlkxucNzp5viMx/uCcVG0C1Q8RYyaShI+qrFw/LXKaQKLovzWfWyMSodE9nn2wvjE2riiYBnSBPHI20z37XEuFRywbzStwNn7m5xaIAhfvIZSL+VXwozPTMZHfbxoviq0mv57jebnUE/myhTNQPwSwbrW7WJrp37De1uBzecl7Buv0HxoEoBFVxI2twXxiE0kCERUg8Z8+Q1Je4ipMc8U+HzE0mnejdzf4UpylSNVQL96YilZMI3061ul1z80Rr+fUnPhcIobC1WoV2dBjdcFt/c0kZqV/NZtZBjrnafM9myp18kvkzBXw12N3eUW7zgl95PYY2waXw4ifRQvI2udete//j2mXzVJox5hAqe/IIzcySuMTTzLbR1urhDGw3Ypxof+LEvI4p0qQZuNiRjn0G2mFy2bmLRlMyOTxWjCPeiVRIsg4nrtUcz41X2dsh69dRyJdBhKIZXrL6kVE26Hta6h3WkYkyEuds3SwvaDZWwLARICdh4Is7BBJvN5dYTd5U/fO89aDrde8q27R+dDeqAO+8lMPcjMrLpGZguerEMvm9ZiTkU5LbMlbsvOTjJNGwcxSC5UGNlcw2QWcVJY+/riqu8wGdlM/XEx3zuKodmOQgznDy4nWr1B2dt8sWy43Y3sfmJ/hgrZNaVO3yx0hJxkOIstPmboM=
 sudo: false
