@@ -7,7 +7,7 @@ body {
   background: $white;
 }
 body > nav  {
-  background: $primary-color;
+  background: $light-grey;
 }
 
 a#toggle {
@@ -95,7 +95,7 @@ h1 {
   padding: 10px 0 15px 0;
   margin: 0;
   background: $primary-color;
-  color: $white;
+  color: $dark-grey;
   font-weight: bold;
 
   @media (#{$bp-larger-than-phablet}) {
@@ -147,7 +147,7 @@ h1 {
       padding-top: 65px;
     }
     a {
-      color: $white;
+      color: $dark-grey;
       font-size: 21px;
       line-height: 30px;
       text-align: center;
@@ -353,39 +353,37 @@ footer {
 }
 
 header, .hero {
-  background: url('../images/hero_img.jpg') no-repeat center center;
+  background: url('../images/') no-repeat center center;
   background-size: cover;
   padding-top: 80px;
   padding-bottom: 60px;
 
   &.hero1 {
-    background: url('../images/hero_img_1.jpg') no-repeat center center;
-    background-size: cover;
-    padding-top: 410px;
+    background: url('../images/make-space.png') no-repeat center center;
+    background-size: 90%;
+    padding-top: 500px;
       padding-bottom: 10px;
   }
   &.hero2 {
-    background: url('../images/hero_img_2.jpg') no-repeat center center;
-    background-size: cover;
+    background: url('../images/think-critically.png') no-repeat top left;
+    background-size: 90%;
     padding-top: 410px;
       padding-bottom: 10px;
   }
   &.hero3 {
-    background: url('../images/hero_img_3.jpg') no-repeat center center;
-    background-size: cover;
-    padding-top: 450px;
+    background: url('../images/embrace-complexity.png') no-repeat center center;
+    background-size: 100%;
+    padding-top: 410px;
     padding-bottom: 10px;
   }
   &.hero4 {
-    background: url('../images/hero_img_next.jpg') no-repeat bottom right;
-    background-size: cover;
-    padding: 0px;
-    min-height: 340px;
-    h1 { padding-top: 140px; }
-    p { padding-bottom: 60px; }
+    background: url('../images/hold-everyone-high.png') no-repeat top center;
+    background-size: 90%;
+    padding-top: 420px;
+    padding-bottom: 100px;
   }
   h1 {
-    color: white;
+    color: $dark-grey;
     margin-left: 10.8%;
     font-size: 56px;
     // font-weight: 900;
