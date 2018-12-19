@@ -140,7 +140,7 @@ h1 {
   li {
     padding: 10px 30px 10px 30px;
     margin-bottom: 0;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
 
     &:first-child {
@@ -150,7 +150,7 @@ h1 {
       color: $dark-grey;
       font-size: 21px;
       line-height: 30px;
-      text-align: center;
+      text-align: left;
     }
   }
   li.active a, li:hover a {
