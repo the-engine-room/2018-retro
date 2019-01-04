@@ -16,7 +16,7 @@ a#toggle {
   //margin-top: -55px;
   margin-left: 20px;
   font-size: 2em;
-  color: $white;
+  color: $dark-grey;
 
 
   @media (#{$bp-larger-than-phablet}) { display: none; }
@@ -129,7 +129,7 @@ h1 {
   &.visible {
     float: none;
     width: 100%;
-    background: $primary-color;
+    background: $light-grey;
     height: 100vh;
     position: absolute;
     top: 56px;
@@ -661,7 +661,7 @@ img.partner-logo {
       margin-right: 15px;
     }
     &.number-spread-all { width: 100%;
-      
+
     }
 
     &.number-spread-1 { width: 33.3333%;
