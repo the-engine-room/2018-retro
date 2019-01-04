@@ -17,7 +17,7 @@ before_install:
 - echo -e "IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
 - echo -e "Host ftp.greenhost.nl" >> ~/.ssh/config
 - echo -e "IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
-- gem install bundler -v ‘< 2’
+- gem install bundler -v '< 2'
 script:
 - bash script/build.sh
 after_success:
