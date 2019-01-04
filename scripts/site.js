@@ -32,7 +32,17 @@ $(document).ready(function() {
             $('a#toggle').html("&#8801;");
         }
     });
-
+    $('.readmore').click(function(e){
+      e.preventDefault();
+      if($(this).prev('p.readmore-p').hasClass('hidden')){
+        $(this).prev('p.readmore-p').removeClass('hidden').addClass('show');
+        $(this).text('Hide');
+      }
+      else {
+        $(this).prev('p.readmore-p').removeClass('show').addClass('hidden');
+        $(this).text('Read More');
+      }
+    });
     // if resize, hide mobile nav
     $(window).resize(function() {
         $('nav ul.nav').removeClass('visible');

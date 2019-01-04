@@ -141,4 +141,9 @@ section.content {
     font-size: 42px; font-weight: 400;
     ~ div { padding-bottom: 30px; }
   }
+
+  .readmore-p {
+    &.hidden { display: none; }
+    &.show { display: block; }
+  }
 }
