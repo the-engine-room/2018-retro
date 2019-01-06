@@ -418,6 +418,13 @@ header, .hero {
   margin-top: 60px;
   margin-bottom: 40px;
 }
+
+.callout-box  {
+	padding: 20px 20px 0px 20px;
+	margin: 40px 25% 40px 0;
+	background: $light-orange;
+}
+
 .page .content {
   h1, h2, h3, h4 {
     text-transform: uppercase;
