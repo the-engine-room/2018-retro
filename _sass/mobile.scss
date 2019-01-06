@@ -1,0 +1,7 @@
+@media (#{$bp-smaller-than-phablet}) {
+  header.hero1 {
+
+    padding: 100px 0px 35px;
+    h1 { margin-left: 5.4%; }
+  }
+}
